@@ -1,0 +1,4 @@
+<div *ngIf="albums" class="row m-0 p-0">
+  <app-album class="col-4" [album]="album" [i]="i" *ngFor="let album of albums;let i = index;">
+  </app-album>
+</div>

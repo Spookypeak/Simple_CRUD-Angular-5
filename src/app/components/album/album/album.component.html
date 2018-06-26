@@ -1,0 +1,10 @@
+<div class="border rounded m-3 row p-0">
+  <img class="col-4 p-0" height="100" [src]="album.thumbnailUrl" alt="Card image cap">
+  <div class="col-8 py-2">
+    <p class="card-title">{{album.title}}</p>
+
+  </div>
+  <div class="col-12 border-top p-2">
+    <a href="" class="btn btn-link float-right" routerLink="/AlbumDetail" (click)="verAlbum(i)">Ver</a>
+  </div>
+</div>

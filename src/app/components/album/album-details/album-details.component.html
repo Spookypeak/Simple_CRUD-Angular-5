@@ -1,0 +1,30 @@
+<a href="" routerLink="/AlbumList" class="btn btn-link">Volver</a>
+<div class="badge badge-danger m-2 p-2" *ngIf="!album">No se ha seleccionado ningún album</div>
+<div class="p-4 row p-0 m-0" *ngIf="album">
+  <div class="col-4">
+    <img class="" height="300" [src]="album.thumbnailUrl" alt="">
+  </div>
+  <div class="col-8 row">
+    <div class="form-group col-6">
+      <label for="exampleInputEmail1">Id</label>
+      <input type="number" class="form-control" disabled id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Id"
+        [(ngModel)]="album.id">
+    </div>
+    <div class="form-group col-6">
+      <label for="exampleInputPassword1">Album id</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="User id" [(ngModel)]="album.albumId">
+    </div>
+    <div class="form-group col-12">
+      <label for="exampleInputPassword1">Thumbnail</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Title" [(ngModel)]="album.thumbnailUrl" />
+    </div>
+    <div class="form-group col-12">
+      <label for="exampleInputPassword1">Url</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Body" [(ngModel)]="album.url" />
+    </div>
+    <div class="col 12">
+      <button class="btn btn-primary mx-2" routerLink="/AlbumList" (click)="guardarAlbum()">Guardar</button>
+      <button class="btn btn-danger mx-2" routerLink="/AlbumList" (click)="eliminarAlbum()">Eliminar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="px-2">
+    <div *ngIf="posts" class="row">
+      <app-post class="col-4 px-2" [post]="post" [i]="i" *ngFor="let post of posts;let i = index;"></app-post>
+    </div>
+  </div>
